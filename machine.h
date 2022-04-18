@@ -143,6 +143,7 @@ void virt_machine_load_config_file(VirtMachineParams *p,
                                    const char *filename,
                                    void (*start_cb)(void *opaque),
                                    void *opaque);
+int load_file(uint8_t **pbuf, const char* filename);
 void vm_add_cmdline(VirtMachineParams *p, const char *cmdline);
 char *get_file_path(const char *base_filename, const char *filename);
 void virt_machine_free_config(VirtMachineParams *p);
