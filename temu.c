@@ -313,7 +313,7 @@ static int bf_write_async(BlockDevice *bs,
     return ret;
 }
 
-static BlockDevice *block_device_init(const char *filename,
+BlockDevice *block_device_init(const char *filename,
                                       BlockDeviceModeEnum mode)
 {
     BlockDevice *bs;
