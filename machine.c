@@ -447,13 +447,13 @@ char *get_file_path(const char *base_filename, const char *filename)
 
 
 #ifdef EMSCRIPTEN
-int load_file(uint8_t **pbuf, const char *filename)
+static int load_file(uint8_t **pbuf, const char *filename)
 {
     abort();
 }
 #else
 /* return -1 if error. */
-int load_file(uint8_t **pbuf, const char *filename)
+static int load_file(uint8_t **pbuf, const char *filename)
 {
     FILE *f;
     int size;
